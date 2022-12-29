@@ -1,0 +1,13 @@
+# Source: cluster-api-aws/templates/rbac.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: ck52nxpvm-capi-aws
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: ck52nxpvm-capi-aws
+subjects:
+- kind: ServiceAccount
+  name: ck52nxpvm-capi-aws
+  namespace: ck52nxpvm
